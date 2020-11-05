@@ -26,6 +26,11 @@
 		0F5055EF254BA7DB0082F733 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5055EE254BA7DB0082F733 /* PlaySound.swift */; };
 		0F505600254BAA920082F733 /* level-completed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F5055FF254BAA920082F733 /* level-completed.mp3 */; };
 		0F505635254F4EB60082F733 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 0F505634254F4EB60082F733 /* XMLCoder */; };
+		0F50564325522A970082F733 /* feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50564225522A960082F733 /* feature.swift */; };
+		0F50564825522AE00082F733 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50564725522AE00082F733 /* MapView.swift */; };
+		0F50564D25522B190082F733 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50564C25522B190082F733 /* Mapper.swift */; };
+		0F50565225522B4E0082F733 /* ProcessFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50565125522B4E0082F733 /* ProcessFeatures.swift */; };
+		0F50565F25536FC90082F733 /* genbankAppendixII_FeatureKeys.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0F50565E25536FC90082F733 /* genbankAppendixII_FeatureKeys.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,11 @@
 		0F5055E9254BA7940082F733 /* ScienceImage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScienceImage2.swift; sourceTree = "<group>"; };
 		0F5055EE254BA7DB0082F733 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		0F5055FF254BAA920082F733 /* level-completed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "level-completed.mp3"; path = "../../../Downloads/level-completed.mp3"; sourceTree = "<group>"; };
+		0F50564225522A960082F733 /* feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feature.swift; sourceTree = "<group>"; };
+		0F50564725522AE00082F733 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		0F50564C25522B190082F733 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		0F50565125522B4E0082F733 /* ProcessFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessFeatures.swift; sourceTree = "<group>"; };
+		0F50565E25536FC90082F733 /* genbankAppendixII_FeatureKeys.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = genbankAppendixII_FeatureKeys.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,7 @@
 		0F50554B254BA0CD0082F733 = {
 			isa = PBXGroup;
 			children = (
+				0F505557254BA0CD0082F733 /* GenEApp.swift */,
 				0F505556254BA0CD0082F733 /* GenE */,
 				0F505568254BA0D00082F733 /* GenETests */,
 				0F505573254BA0D00082F733 /* GenEUITests */,
@@ -121,12 +132,16 @@
 		0F505556254BA0CD0082F733 /* GenE */ = {
 			isa = PBXGroup;
 			children = (
-				0F505557254BA0CD0082F733 /* GenEApp.swift */,
 				0F505559254BA0CD0082F733 /* ContentView.swift */,
+				0F50564225522A960082F733 /* feature.swift */,
+				0F50564725522AE00082F733 /* MapView.swift */,
+				0F50564C25522B190082F733 /* Mapper.swift */,
+				0F50565125522B4E0082F733 /* ProcessFeatures.swift */,
 				0F5055D2254BA6C40082F733 /* Logo.swift */,
 				0F5055D7254BA70D0082F733 /* Map.swift */,
 				0F5055DC254BA7490082F733 /* SceneDelegate.swift */,
 				0F505585254BA0E50082F733 /* Screen.swift */,
+				0F50565E25536FC90082F733 /* genbankAppendixII_FeatureKeys.rtf */,
 				0F50558A254BA1150082F733 /* dataManager.swift */,
 				0F5055E4254BA7830082F733 /* ScienceImage1.swift */,
 				0F5055E9254BA7940082F733 /* ScienceImage2.swift */,
@@ -281,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F50555F254BA0CF0082F733 /* Preview Assets.xcassets in Resources */,
+				0F50565F25536FC90082F733 /* genbankAppendixII_FeatureKeys.rtf in Resources */,
 				0F505600254BAA920082F733 /* level-completed.mp3 in Resources */,
 				0F50555C254BA0CF0082F733 /* Assets.xcassets in Resources */,
 			);
@@ -309,14 +325,18 @@
 			files = (
 				0F5055D8254BA70D0082F733 /* Map.swift in Sources */,
 				0F5055EF254BA7DB0082F733 /* PlaySound.swift in Sources */,
+				0F50564325522A970082F733 /* feature.swift in Sources */,
+				0F50565225522B4E0082F733 /* ProcessFeatures.swift in Sources */,
 				0F5055BF254BA4DC0082F733 /* About.swift in Sources */,
 				0F50555A254BA0CD0082F733 /* ContentView.swift in Sources */,
 				0F50558B254BA1150082F733 /* dataManager.swift in Sources */,
 				0F5055D3254BA6C40082F733 /* Logo.swift in Sources */,
+				0F50564825522AE00082F733 /* MapView.swift in Sources */,
 				0F505558254BA0CD0082F733 /* GenEApp.swift in Sources */,
 				0F5055EA254BA7940082F733 /* ScienceImage2.swift in Sources */,
 				0F5055DD254BA7490082F733 /* SceneDelegate.swift in Sources */,
 				0F5055E5254BA7830082F733 /* ScienceImage1.swift in Sources */,
+				0F50564D25522B190082F733 /* Mapper.swift in Sources */,
 				0F505586254BA0E50082F733 /* Screen.swift in Sources */,
 				0F5055C9254BA5E10082F733 /* AppDelegate.swift in Sources */,
 				0F5055C4254BA5640082F733 /* AboutImage.swift in Sources */,

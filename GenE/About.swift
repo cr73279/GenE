@@ -38,7 +38,7 @@ struct About: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .offset(x: 0, y: -260)
-                    
+                        .padding()
                     HStack {
                         ScienceImage1()
                             .offset(x: 0, y: -130)

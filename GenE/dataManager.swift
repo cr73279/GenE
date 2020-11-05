@@ -57,7 +57,10 @@ struct INSDSeq_FeatureTable: Decodable {
     let INSDFeature: [INSDFeature]
 }
 
-struct INSDFeature: Decodable, Hashable {
+struct INSDFeature: Decodable, Hashable, Identifiable {
+    var id: String {
+        UUID().uuidString
+    }
     let INSDFeature_key: String
     let INSDFeature_location: String
     let INSDFeature_intervals: [INSDFeature_intervals]

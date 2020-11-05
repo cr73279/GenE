@@ -13,14 +13,19 @@ struct Map: View {
     
     @Binding public var seqId: String
     
-    // rz- to pass seqId to second view
-    //@State public var seqId2: String = ""
+    // rz- fabiola map view
+    @State private var showMap = true
     
     var body: some View {
         
         ZStack {
             VStack {
-                Text("Results").foregroundColor(Color.white).onAppear{self.dataManager.downloadSeqData(seqId: self.seqId)}                        .onAppear(perform: playSound)/*rz want to add this sound func to contentview somehow, otherwise it will constantly play sound when page loads */ .edgesIgnoringSafeArea(.all)
+                
+//                Button("Show feature map"){
+//                    self.showMap = true
+//                }
+                
+                Text("Results").foregroundColor(Color.black).onAppear{self.dataManager.downloadSeqData(seqId: self.seqId)}                        .onAppear(perform: playSound)/*rz want to add this sound func to contentview somehow, otherwise it will constantly play sound when page loads */ .edgesIgnoringSafeArea(.all)
                 
                 //rz- if strand is linear draw line
                 if dataManager.dataSet?.INSDSeq.topology == "linear" {
@@ -34,7 +39,10 @@ struct Map: View {
                 Circle()
                     .stroke(Color.black, style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
                     .frame(width: 500, height: 500)
+                    
+                    
                 }
+                //rz- if neither present
                 if dataManager.dataSet?.INSDSeq.topology != "circular" && dataManager.dataSet?.INSDSeq.topology != "linear"{
                     Text("Data Unavailable, try a new accession number.")
                 }
@@ -42,14 +50,13 @@ struct Map: View {
                 
             .navigationBarItems(
 //rz - added home and genbank view to navigation bars
-                leading:
-                    NavigationLink(destination: ContentView()) {
-                           Text("New Query")
-                               .font(.title)
-                               .foregroundColor(Color.black)
-                        },
-
-                trailing: 
+//                leading:
+//                    NavigationLink(destination: ContentView()) {
+//                           Text("New Query")
+//                               .font(.title)
+//                               .foregroundColor(Color.black)
+//                        },
+                trailing:
                     NavigationLink(destination: Screen(seqId: self.seqId)) {
                       Text("GenBank View")
                           .font(.title)
@@ -57,6 +64,9 @@ struct Map: View {
                    }
             )
         }
+//            .sheet(isPresented: $showMap){
+//        GeneMapper()
+//        }
     }
 }
 

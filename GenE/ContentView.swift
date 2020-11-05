@@ -4,14 +4,17 @@
 //
 //  Created by chris richardson on 10/29/20.
 //
-
 import SwiftUI
 
 
 
 struct ContentView: View {
-//    @ObservedObject var favorites = Favorites()
+    
     @State public var seqId: String = ""
+    
+    // rz- fabiola code for map
+    @State public var showMap = false
+
   
     var body: some View {
         
@@ -58,9 +61,9 @@ struct ContentView: View {
                             .background(Color(red: 86/255, green: 118/255, blue: 255/255))
                             .cornerRadius(20)
                             .offset(x: 0, y: 50)
+                            
                     }.padding()
                 }.padding()
-                
                 .navigationBarItems(
                      leading:
                          NavigationLink(destination: About()) {
@@ -70,9 +73,9 @@ struct ContentView: View {
                              },
                             
                         
-                     trailing: 
+                     trailing:
                     // rz - help button opens safari link to Gen-E project github
-                        Button("Help") {UIApplication.shared.open(URL(string: "https://github.com/xrdmzx/GenE_rz")!)}
+                        Button("Help") {UIApplication.shared.open(URL(string: "https://youtu.be/ENOXdgss29s")!)}
                                 .font(.title)
                                 .foregroundColor(.white)
                  )
@@ -80,7 +83,6 @@ struct ContentView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
-    
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {

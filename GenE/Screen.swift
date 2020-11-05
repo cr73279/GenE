@@ -48,7 +48,7 @@ struct Screen: View {
                 .cornerRadius(10)
                 
                 VStack(alignment: .leading, spacing: 10) {
-                    ForEach(dataManager.featureList, id:\.self) { feature in
+                    ForEach(dataManager.featureList) { feature in
                         
                         VStack (alignment: .leading){
                             VStack (alignment: .leading) {
@@ -57,9 +57,9 @@ struct Screen: View {
                             }.padding()
                         
                             IntervalSection(feature: feature)
-                            
+
                             QualsSection(feature: feature)
-                            
+
                         }
                         .cornerRadius(10)
                     }
